@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">android-unit-test-custom-view</string>
+
+    <string name="count_content">Count: %d</string>
+    <string name="button_subtract">-</string>
+    <string name="button_add">+</string>
+    <string name="button_reset">Reset</string>
+</resources>
