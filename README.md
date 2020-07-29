@@ -1,2 +1,2 @@
 # android-unit-test-custom-view
-How to unit test Android custom view with MockK and Robolectric
+How to unit test Android custom view with AndroidX Text and Robolectric
