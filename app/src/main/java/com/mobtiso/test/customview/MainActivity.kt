@@ -13,10 +13,6 @@ class MainActivity : AppCompatActivity() {
         val countView = findViewById<CountView>(R.id.countView)
         val countContentTextView = findViewById<TextView>(R.id.countContentTextView)
 
-        countView.setListener {
-            countContentTextView.text = getString(R.string.count_content, it)
-        }
-
         val buttonReset = findViewById<Button>(R.id.buttonReset)
         buttonReset.setOnClickListener {
             countView.reset()

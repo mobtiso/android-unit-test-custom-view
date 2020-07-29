@@ -5,6 +5,7 @@ import android.util.AttributeSet
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.annotation.VisibleForTesting
 
 class CountView @JvmOverloads constructor(
     context: Context,
@@ -17,9 +18,8 @@ class CountView @JvmOverloads constructor(
     private val buttonAdd: Button
     private val textViewCount: TextView
 
-    private var countValue = 0
-
-    private var listener: ((Int) -> Unit)? = null
+    @VisibleForTesting
+    var countValue = 0
 
     init {
         inflate(context, R.layout.count_custom_view, this)
@@ -36,15 +36,9 @@ class CountView @JvmOverloads constructor(
         }
     }
 
-    fun setListener(listener: ((Int) -> Unit)?) {
-        this.listener = listener
-    }
-
     private fun updateCount(value: Int) {
         countValue = value
         textViewCount.text = countValue.toString()
-
-        listener?.invoke(countValue)
     }
 
     fun reset() {
